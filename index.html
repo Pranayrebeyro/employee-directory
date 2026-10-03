@@ -1,59 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Employee Directory</title>
-    <link rel="stylesheet" href="public/css/styles.css" />
-  </head>
-  <body>
-    <h1>Employee Directory</h1>
 
-    <!-- Search Bar -->
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Search by name or email"
-      oninput="search()"
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
     />
 
-    <!-- Sort Dropdown -->
-    <select id="sortSelect" onchange="sortEmployees()">
-      <option value="">Sort By</option>
-      <option value="firstName">First Name</option>
-      <option value="department">Department</option>
-    </select>
+    <meta
+      name="description"
+      content="Employee Directory - Manage employees in one place"
+    />
 
-    <!-- Filter Department -->
-    <select id="filterDepartment" onchange="filterEmployees()">
-      <option value="">All Departments</option>
-      <option value="Engineering">Engineering</option>
-      <option value="Design">Design</option>
-      <option value="HR">HR</option>
-    </select>
+    <title>Employee Directory</title>
+  </head>
 
-    <!-- Filter Role -->
-    <select id="filterRole" onchange="filterEmployees()">
-      <option value="">All Roles</option>
-      <option value="Frontend Developer">Frontend Developer</option>
-      <option value="UI/UX Designer">UI/UX Designer</option>
-      <option value="HR Manager">HR Manager</option>
-    </select>
+  <body>
+    <div id="root"></div>
 
-    <!-- Per Page -->
-    <select id="perPageSelect" onchange="changePerPage()">
-      <option value="10">10 per page</option>
-      <option value="25">25 per page</option>
-      <option value="50">50 per page</option>
-      <option value="100">100 per page</option>
-    </select>
-
-    <!-- Add New Button -->
-    <button onclick="addNew()">Add New Employee</button>
-
-    <!-- Container for Employees -->
-    <div id="dashboardContainer"></div>
-
-    <script src="public/js/main.js"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
